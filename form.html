@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prospective Tenant Pre-Screening Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Prospective Tenant Pre-Screening Form</h1>
+    <p class="lead">Please complete this short form before we arrange a viewing. The information helps with initial screening only. All details are kept confidential.</p>
+
+    <form id="tenantForm" novalidate>
+      <fieldset>
+        <legend>Section 1 — Personal Information</legend>
+        <label for="fullName">Full name <span class="req">*</span></label>
+        <input id="fullName" name="fullName" type="text" required>
+
+        <label for="dob">Date of birth <span class="req">*</span></label>
+        <input id="dob" name="dob" type="date" required>
+
+        <label for="phone">Phone number <span class="req">*</span></label>
+        <input id="phone" name="phone" type="tel" placeholder="+44 7..." required>
+
+        <label for="email">Email address <span class="req">*</span></label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="nationality">Nationality <span class="req">*</span></label>
+        <input id="nationality" name="nationality" type="text" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Section 2 — Current Living Situation</legend>
+        <label for="currentAddress">Current address <span class="req">*</span></label>
+        <textarea id="currentAddress" name="currentAddress" rows="3" required></textarea>
+
+        <label for="timeAtAddress">How long have you lived at your current address?</label>
+        <input id="timeAtAddress" name="timeAtAddress" type="text" placeholder="e.g. 2 years">
+
+        <label for="reasonForMoving">Reason for moving</label>
+        <textarea id="reasonForMoving" name="reasonForMoving" rows="2"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Section 3 — Connection to Salford / Greater Manchester</legend>
+        <label for="timeInSalford">How long have you been living in Salford / Greater Manchester (if applicable)?</label>
+        <input id="timeInSalford" name="timeInSalford" type="text">
+
+        <label>Are you planning to stay in the area long-term?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="longTerm" value="Yes"> Yes</label>
+          <label><input type="radio" name="longTerm" value="No"> No</label>
+          <label><input type="radio" name="longTerm" value="Not sure"> Not sure</label>
+        </div>
+
+        <label for="stayDetails">If yes, please provide details</label>
+        <textarea id="stayDetails" name="stayDetails" rows="2"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Section 4 — Employment & Financial Details</legend>
+        <label for="employmentStatus">Employment status</label>
+        <select id="employmentStatus" name="employmentStatus">
+          <option value="">-- Select --</option>
+          <option>Full-time employment</option>
+          <option>Part-time employment</option>
+          <option>Self-employed</option>
+          <option>Student</option>
+          <option>Unemployed</option>
+          <option>Other</option>
+        </select>
+
+        <label for="occupation">Occupation / Employer (or University/College)</label>
+        <input id="occupation" name="occupation" type="text">
+
+        <label for="timeInRole">How long have you been in your current job/course?</label>
+        <input id="timeInRole" name="timeInRole" type="text">
+
+        <label for="income">Approximate monthly income</label>
+        <input id="income" name="income" type="text" placeholder="e.g. £1,200">
+
+        <label>Able to provide proof of income or guarantor if required?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="proof" value="Yes"> Yes</label>
+          <label><input type="radio" name="proof" value="No"> No</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Section 5 — Accommodation Needs</legend>
+        <label for="moveInDate">Preferred move-in date</label>
+        <input id="moveInDate" name="moveInDate" type="date">
+
+        <label for="lengthOfStay">How long are you looking to stay?</label>
+        <input id="lengthOfStay" name="lengthOfStay" type="text" placeholder="e.g. 6 months, long-term">
+
+        <label>Do you require parking?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="parking" value="Yes"> Yes</label>
+          <label><input type="radio" name="parking" value="No"> No</label>
+        </div>
+
+        <label for="specialNeeds">Any special accommodation needs?</label>
+        <textarea id="specialNeeds" name="specialNeeds" rows="2"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Section 6 — References</legend>
+        <label>Previous landlord reference available?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="landlordRef" value="Yes"> Yes</label>
+          <label><input type="radio" name="landlordRef" value="No"> No</label>
+        </div>
+
+        <label>Employer / Character reference available?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="charRef" value="Yes"> Yes</label>
+          <label><input type="radio" name="charRef" value="No"> No</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Section 7 — Additional Details</legend>
+        <label>Do you smoke?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="smoke" value="Yes"> Yes</label>
+          <label><input type="radio" name="smoke" value="No"> No</label>
+        </div>
+
+        <label>Do you have pets?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="pets" value="Yes"> Yes</label>
+          <label><input type="radio" name="pets" value="No"> No</label>
+        </div>
+
+        <label for="petsDetails">If yes, please specify</label>
+        <input id="petsDetails" name="petsDetails" type="text">
+
+        <label for="anythingElse">Anything else you would like to mention?</label>
+        <textarea id="anythingElse" name="anythingElse" rows="3"></textarea>
+      </fieldset>
+
+      <div class="buttons">
+        <button type="submit" id="submitBtn">Submit</button>
+      </div>
+
+      <p id="formMessage" class="hidden" role="status"></p>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
